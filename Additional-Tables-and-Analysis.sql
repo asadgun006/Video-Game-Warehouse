@@ -1,4 +1,4 @@
-##Database normalization and Analysis
+## Database normalization and Analysis
 
 #--This procedure creates additional tables for normalization and better analysis
 #--A new table is created from the base table saved by the pipeline for backup
