@@ -25,6 +25,6 @@ to remove the flower, remove redis, and use `LocalExecutor` instead of the defau
 ## Running the pipeline
 * DAGs are stores in the `dags` folder by default. Once your ETL python file is ready, enter the Airflow webserver container within Docker and use the `airflow dags unpause <your-dag>` to unpause the DAG, or you can use the Airflow UI for unpausing a DAG.
 * In my case, I manually triggered the DAG to process the data in batches, and to monitor any errors. Use `airflow dags trigger <your-dag>` to manually trigger a DAG, and navigate to the airflow webserver to monitor.
-* The DAG ran for ~3.5 hours and the API calls were handled for any exceptions. This is crucial as you don't want to waste your API requests limit provided by RAWG by encountering an error after thousands of API calls.
+* The DAG ran for ~3.5 hours and the API calls were handled for any exceptions. This is crucial as you don't want to waste your API requests limit provided by RAWG by encountering an error after thousands of API calls. All the data was extracted with ~12000 API calls.
 
 Once finished, the database was transformed and normalized for better querying and analysis
